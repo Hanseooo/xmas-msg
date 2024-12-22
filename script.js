@@ -16,7 +16,7 @@ window.addEventListener('load', async () => {
     function playMusic() {
         audio.setAttribute("src", 'blue (instrumental).mp3')
         audio.muted = true
-        audio.volume = 0.1;
+        audio.volume = 0.075;
         body.appendChild(audio)
         setTimeout(() => {
             audio.muted = false;
