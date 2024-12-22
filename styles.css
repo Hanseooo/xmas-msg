@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    transform: scale(1.2);
+    overflow: hidden;
+    height: 100svh;
+}
+spline-viewer {
+    height: 100svh;
+    width: 100vw;
+}
+
+@media (max-width: 430px) {
+    body {
+        overflow: hidden;
+        position: relative;
+        height: 95svh;
+    }
+    spline-viewer {
+        height: 95svh;
+        width: 100vw;
+        transform: scale(1.4);
+    }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-size: 40px;
+    font-family: system-ui,sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #000;
+    background: 
+      linear-gradient(90deg,#0000 33%,#000 0 67%,#0000 0) 
+      0/300% 100% no-repeat text;
+    animation: l2 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .loader:before {
+    content: "Loading";
+  }
+  @keyframes l2 {
+    0%{background-position: 100%}
+  }
