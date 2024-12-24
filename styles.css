@@ -40,7 +40,7 @@ spline-viewer {
       0/300% 100% no-repeat text;
     animation: l2 2s linear infinite;
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
