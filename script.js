@@ -12,14 +12,14 @@ window.addEventListener('load', async () => {
 })
 
     document.addEventListener('DOMContentLoaded', function() {
-        audio.setAttribute("src", 'blue (instrumental).mp3')
-        audio.muted = true
-        audio.volume = 0.1;
-        body.appendChild(audio)
         playMusic();
     });
 
     function playMusic() {
+        audio.setAttribute("src", 'blue (instrumental).mp3')
+        audio.muted = true
+        audio.volume = 0.1;
+        body.appendChild(audio)
         setTimeout(() => {
             audio.muted = false;
             audio.play().then(() => {
