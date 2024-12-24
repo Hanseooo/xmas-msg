@@ -2,6 +2,11 @@ const body = document.querySelector('body');
 const audio = document.createElement('audio')
 const splineViewer = document.querySelector('spline-viewer')
 
+audio.setAttribute("src", 'blue (instrumental).mp3')
+audio.muted = true
+audio.volume = 0.1;
+body.appendChild(audio)
+
 window.addEventListener('load', async () => {
     var loader = document.querySelector('#loader')
     await new Promise(resolve => setTimeout(resolve, 750));
@@ -9,15 +14,11 @@ window.addEventListener('load', async () => {
     splineViewer.style.display = 'block';
 })
 
-    document.addEventListener('DOMContentLoaded', function() {
-        playMusic();
-    });
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     playMusic();
+    // });
 
     function playMusic() {
-        audio.setAttribute("src", 'blue (instrumental).mp3')
-        audio.muted = true
-        audio.volume = 0.075;
-        body.appendChild(audio)
         setTimeout(() => {
             audio.muted = false;
             audio.play().then(() => {
